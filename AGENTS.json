@@ -1,0 +1,369 @@
+{
+    "version":  "1.0",
+    "project":  "Software Modernization Multi-Agent System",
+    "description":  "Eight-agent setup for reverse engineering, legacy-specific modernization, re-architecture, backend, frontend, QA, SonarQube, and CI/CD modernization workflows.",
+    "scope":  "documentation, legacy platform assessment, implementation guidance, implementation execution, validation, quality governance, and delivery automation",
+    "agents":  [
+                   {
+                       "id":  "reverse-engineering-documents",
+                       "name":  "Reverse Engineering Documents Agent",
+                       "role":  "discovery-documentation",
+                       "path":  "01-reverse-engineering-documents",
+                       "description":  "Understands the existing system and prepares As-Is architecture, gaps, risks, and modernization opportunities.",
+                       "capabilities":  [
+                                            "document-collection",
+                                            "codebase-analysis",
+                                            "module-identification",
+                                            "business-workflow-analysis",
+                                            "frontend-screen-navigation-analysis",
+                                            "backend-api-service-analysis",
+                                            "database-schema-analysis",
+                                            "third-party-integration-analysis",
+                                            "batch-scheduled-task-analysis",
+                                            "security-authentication-flow-analysis",
+                                            "deployment-process-capture",
+                                            "as-is-architecture-documentation",
+                                            "gap-risk-opportunity-analysis"
+                                        ],
+                       "triggers":  [
+                                        "reverse engineering",
+                                        "as-is architecture",
+                                        "understand existing system",
+                                        "legacy analysis",
+                                        "current state documentation"
+                                    ],
+                       "subAgentDirectory":  "01-reverse-engineering-documents/sub-agents",
+                       "subAgentCount":  13
+                   },
+                   {
+                       "id":  "legacy-specific-modernization",
+                       "name":  "Legacy-Specific Modernization Agent",
+                       "role":  "legacy-platform-modernization",
+                       "path":  "08-legacy-specific-modernization",
+                       "description":  "Creates technology-specific modernization assessment, conversion strategy, and handoff plans for a particular legacy platform or application family.",
+                       "capabilities":  [
+                                            "legacy-modernization-intake",
+                                            "mainframe-cobol-modernization",
+                                            "vb6-com-modernization",
+                                            "oracle-forms-reports-modernization",
+                                            "powerbuilder-modernization",
+                                            "dotnet-framework-modernization",
+                                            "java-ee-struts-modernization",
+                                            "database-stored-procedure-modernization",
+                                            "legacy-batch-reporting-modernization",
+                                            "modernization-roadmap-handoff"
+                                        ],
+                       "requiredDecisionGates":  [
+                                                     "legacy-platform-confirmation",
+                                                     "modernization-goal-confirmation",
+                                                     "artifact-availability-confirmation",
+                                                     "compatibility-constraint-confirmation",
+                                                     "target-platform-constraint-confirmation"
+                                                 ],
+                       "triggers":  [
+                                        "legacy-specific modernization",
+                                        "mainframe modernization",
+                                        "cobol modernization",
+                                        "vb6 modernization",
+                                        "oracle forms modernization",
+                                        "powerbuilder modernization",
+                                        "struts modernization",
+                                        "dotnet framework modernization",
+                                        "stored procedure modernization",
+                                        "batch modernization"
+                                    ],
+                       "subAgentDirectory":  "08-legacy-specific-modernization/sub-agents",
+                       "subAgentCount":  10
+                   },
+                   {
+                       "id":  "redesign-rearchitecture-documents",
+                       "name":  "Re-design / Re-architecture Documents Agent",
+                       "role":  "target-architecture-documentation",
+                       "path":  "02-redesign-rearchitecture-documents",
+                       "description":  "Defines the target system and prepares To-Be architecture documentation after asking architecture decision questions.",
+                       "capabilities":  [
+                                            "target-architecture-definition",
+                                            "technology-stack-selection",
+                                            "application-layer-definition",
+                                            "frontend-architecture-definition",
+                                            "backend-architecture-definition",
+                                            "database-design",
+                                            "api-contract-definition",
+                                            "authentication-authorization-modeling",
+                                            "logging-monitoring-design",
+                                            "scalability-performance-design",
+                                            "migration-strategy-definition",
+                                            "deployment-architecture-definition",
+                                            "to-be-architecture-documentation",
+                                            "review-comment-approval-capture"
+                                        ],
+                       "requiredDecisionGates":  [
+                                                     "architecture-setup-questions",
+                                                     "target-architecture-kind-selection",
+                                                     "technology-stack-confirmation",
+                                                     "migration-approach-confirmation"
+                                                 ],
+                       "triggers":  [
+                                        "re-design",
+                                        "re-architecture",
+                                        "to-be architecture",
+                                        "target architecture",
+                                        "modernization architecture"
+                                    ],
+                       "subAgentDirectory":  "02-redesign-rearchitecture-documents/sub-agents",
+                       "subAgentCount":  16
+                   },
+                   {
+                       "id":  "backend",
+                       "name":  "Backend Agent",
+                       "role":  "backend-implementation",
+                       "path":  "03-backend",
+                       "description":  "Builds backend services, APIs, persistence, validation, auth, logging, tests, and code quality fixes.",
+                       "capabilities":  [
+                                            "backend-project-setup",
+                                            "folder-package-structure-definition",
+                                            "environment-profile-configuration",
+                                            "database-connection-setup",
+                                            "entity-model-creation",
+                                            "repository-data-access-creation",
+                                            "service-business-logic-creation",
+                                            "controller-api-endpoint-creation",
+                                            "dto-creation",
+                                            "validation",
+                                            "authentication-authorization",
+                                            "exception-handling",
+                                            "logging",
+                                            "unit-testing",
+                                            "integration-testing",
+                                            "code-quality-checks",
+                                            "sonarqube-remediation",
+                                            "pull-request-readiness"
+                                        ],
+                       "requiredDecisionGates":  [
+                                                     "backend-project-structure-questions",
+                                                     "layering-style-confirmation",
+                                                     "api-contract-confirmation",
+                                                     "database-access-pattern-confirmation"
+                                                 ],
+                       "triggers":  [
+                                        "backend",
+                                        "api",
+                                        "service implementation",
+                                        "controller",
+                                        "repository",
+                                        "database connection"
+                                    ],
+                       "subAgentDirectory":  "03-backend/sub-agents",
+                       "subAgentCount":  20
+                   },
+                   {
+                       "id":  "frontend",
+                       "name":  "Frontend Agent",
+                       "role":  "frontend-implementation",
+                       "path":  "04-frontend",
+                       "description":  "Builds frontend project structure, routing, layout, pages, components, state, API integration, validation, accessibility, tests, and quality fixes.",
+                       "capabilities":  [
+                                            "frontend-project-setup",
+                                            "project-structure-definition",
+                                            "routing-configuration",
+                                            "layout-shared-component-setup",
+                                            "ui-library-design-system-setup",
+                                            "page-screen-creation",
+                                            "reusable-component-creation",
+                                            "state-management-setup",
+                                            "backend-api-integration",
+                                            "form-validation",
+                                            "error-handling",
+                                            "loading-states",
+                                            "accessibility-checks",
+                                            "unit-testing",
+                                            "ui-component-testing",
+                                            "eslint-prettier-configuration",
+                                            "code-quality-checks",
+                                            "sonarqube-remediation",
+                                            "pull-request-readiness"
+                                        ],
+                       "requiredDecisionGates":  [
+                                                     "frontend-project-structure-questions",
+                                                     "routing-style-confirmation",
+                                                     "state-management-confirmation",
+                                                     "ui-library-confirmation"
+                                                 ],
+                       "triggers":  [
+                                        "frontend",
+                                        "ui",
+                                        "screen",
+                                        "page",
+                                        "component",
+                                        "client-side"
+                                    ],
+                       "subAgentDirectory":  "04-frontend/sub-agents",
+                       "subAgentCount":  21
+                   },
+                   {
+                       "id":  "qa",
+                       "name":  "QA Agent",
+                       "role":  "quality-validation",
+                       "path":  "05-qa",
+                       "description":  "Validates application quality through test strategy, test cases, execution, defect management, retesting, reporting, and sign-off.",
+                       "capabilities":  [
+                                            "requirements-understanding",
+                                            "test-strategy-preparation",
+                                            "test-scenario-preparation",
+                                            "test-case-preparation",
+                                            "test-data-preparation",
+                                            "test-environment-setup",
+                                            "functional-testing",
+                                            "api-testing",
+                                            "frontend-ui-testing",
+                                            "integration-testing",
+                                            "regression-testing",
+                                            "smoke-testing",
+                                            "negative-testing",
+                                            "performance-testing",
+                                            "defect-logging",
+                                            "fix-retesting",
+                                            "qa-reporting",
+                                            "qa-signoff"
+                                        ],
+                       "requiredDecisionGates":  [
+                                                     "testing-tool-selection-questions",
+                                                     "test-script-structure-confirmation",
+                                                     "environment-and-test-data-confirmation",
+                                                     "signoff-criteria-confirmation"
+                                                 ],
+                       "triggers":  [
+                                        "qa",
+                                        "testing",
+                                        "test cases",
+                                        "test scripts",
+                                        "defects",
+                                        "sign-off"
+                                    ],
+                       "subAgentDirectory":  "05-qa/sub-agents",
+                       "subAgentCount":  19
+                   },
+                   {
+                       "id":  "sonarqube-code-quality",
+                       "name":  "SonarQube / Code Quality Agent",
+                       "role":  "quality-governance",
+                       "path":  "06-sonarqube-code-quality",
+                       "description":  "Sets up SonarQube, scanners, quality gates, coverage thresholds, code smell, vulnerability, duplication checks, CI integration, reports, and remediation workflow.",
+                       "capabilities":  [
+                                            "sonarqube-project-setup",
+                                            "scanner-configuration",
+                                            "quality-gate-configuration",
+                                            "coverage-threshold-definition",
+                                            "code-smell-checks",
+                                            "vulnerability-checks",
+                                            "duplicate-code-checks",
+                                            "cicd-integration",
+                                            "pull-request-scan",
+                                            "quality-report-generation",
+                                            "issue-assignment",
+                                            "blocker-critical-fix-guidance",
+                                            "rescan",
+                                            "quality-gate-approval"
+                                        ],
+                       "requiredDecisionGates":  [
+                                                     "quality-gate-threshold-confirmation",
+                                                     "language-scanner-confirmation",
+                                                     "coverage-report-path-confirmation",
+                                                     "severity-policy-confirmation"
+                                                 ],
+                       "triggers":  [
+                                        "sonarqube",
+                                        "code quality",
+                                        "quality gate",
+                                        "coverage",
+                                        "static analysis",
+                                        "vulnerabilities"
+                                    ],
+                       "subAgentDirectory":  "06-sonarqube-code-quality/sub-agents",
+                       "subAgentCount":  15
+                   },
+                   {
+                       "id":  "cicd-pipeline",
+                       "name":  "CI/CD Pipeline Agent",
+                       "role":  "delivery-automation",
+                       "path":  "07-cicd-pipeline",
+                       "description":  "Automates build, test, quality scan, security scan, artifact/image publishing, deployment, smoke testing, rollback, approval gates, and notifications.",
+                       "capabilities":  [
+                                            "pipeline-stage-definition",
+                                            "source-checkout-configuration",
+                                            "dependency-installation",
+                                            "build-automation",
+                                            "unit-test-automation",
+                                            "integration-test-automation",
+                                            "sonarqube-scan-automation",
+                                            "security-dependency-scan",
+                                            "artifact-generation",
+                                            "docker-image-build",
+                                            "registry-push",
+                                            "development-deployment",
+                                            "qa-uat-deployment",
+                                            "production-approval-gate",
+                                            "production-deployment",
+                                            "post-deployment-smoke-tests",
+                                            "rollback-process",
+                                            "success-failure-notifications"
+                                        ],
+                       "requiredDecisionGates":  [
+                                                     "cicd-platform-confirmation",
+                                                     "environment-promotion-confirmation",
+                                                     "deployment-target-confirmation",
+                                                     "approval-and-rollback-confirmation"
+                                                 ],
+                       "triggers":  [
+                                        "ci/cd",
+                                        "pipeline",
+                                        "build",
+                                        "deploy",
+                                        "release",
+                                        "rollback"
+                                    ],
+                       "subAgentDirectory":  "07-cicd-pipeline/sub-agents",
+                       "subAgentCount":  19
+                   }
+               ],
+    "workflow":  {
+                     "modernization-end-to-end":  [
+                                                      "reverse-engineering-documents",
+                                                      "legacy-specific-modernization",
+                                                      "redesign-rearchitecture-documents",
+                                                      "backend",
+                                                      "frontend",
+                                                      "qa",
+                                                      "sonarqube-code-quality",
+                                                      "cicd-pipeline"
+                                                  ],
+                     "documentation-only":  [
+                                                "reverse-engineering-documents",
+                                                "legacy-specific-modernization",
+                                                "redesign-rearchitecture-documents"
+                                            ],
+                     "implementation-only":  [
+                                                 "backend",
+                                                 "frontend",
+                                                 "qa",
+                                                 "sonarqube-code-quality"
+                                             ],
+                     "delivery-only":  [
+                                           "sonarqube-code-quality",
+                                           "cicd-pipeline"
+                                       ],
+                     "legacy-assessment-only":  [
+                                                    "legacy-specific-modernization"
+                                                ]
+                 },
+    "recommendedOutputDirectories":  {
+                                         "reverseEngineering":  "docs/reverse-engineering",
+                                         "architecture":  "docs/architecture",
+                                         "backend":  "docs/backend",
+                                         "frontend":  "docs/frontend",
+                                         "qa":  "docs/qa",
+                                         "codeQuality":  "docs/code-quality",
+                                         "cicd":  "docs/cicd",
+                                         "legacyModernization":  "docs/legacy-modernization"
+                                     }
+}
